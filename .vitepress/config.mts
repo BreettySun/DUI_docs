@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	base: "/dui/",
+	base: "/dui_docs/",
 	title: "DUI",
 	description: "DUI",
 	themeConfig: {
