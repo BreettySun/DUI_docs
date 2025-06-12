@@ -8,7 +8,7 @@ hero:
   tagline: 基于 Stencil 开发的 Web Component 组件库
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 快速开始
       link: /markdown-examples
     - theme: alt
       text: API Examples
