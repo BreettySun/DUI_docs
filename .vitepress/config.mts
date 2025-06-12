@@ -24,10 +24,19 @@ export default defineConfig({
 				// text: "快速开始",
 				items: [{ text: "快速开始", link: "/quickstart" }],
 			},
+			{
+				text: "Components",
+				items: [
+					{
+						text: "General",
+						items: [{ text: "Button", link: "/components/button" }],
+					},
+				],
+			},
 		],
 
 		socialLinks: [
-			{ icon: "github", link: "https://github.com/vuejs/vitepress" },
+			{ icon: "github", link: "https://github.com/BreettySun/DUI" },
 		],
 
 		footer: {
@@ -36,8 +45,8 @@ export default defineConfig({
 		},
 	},
 	head: [
-		["link", { rel: "icon", href: "/diggo.ico" }],
-		["script", { type: "module", src: "/dist/dui/dui.esm.js" }],
-		["script", { nomodule: "", src: "/dist/esm/dui.js" }],
+		["link", { rel: "shortcut icon", href: "diggo.ico" }],
+		["script", { type: "module", src: "dist/dui/dui.esm.js", async: "" }],
+		["script", { nomodule: "", src: "dist/esm/dui.js", async: "" }],
 	],
 });
