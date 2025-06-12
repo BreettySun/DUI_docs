@@ -29,11 +29,27 @@ export default defineConfig({
 				items: [
 					{
 						text: "General",
-						items: [{ text: "Button", link: "/components/button" }],
+						items: [
+							{ text: "Button 按钮", link: "/components/general/button" },
+							{ text: "Icon 图标", link: "/components/general/icon" },
+						],
+					},
+					{
+						text: "Feedback",
+						items: [
+							{
+								text: "Message 全局提示",
+								link: "/components/feedback/message",
+							},
+						],
 					},
 				],
 			},
 		],
+
+		outline: {
+			level: [2, 3],
+		},
 
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/BreettySun/DUI" },
@@ -41,12 +57,14 @@ export default defineConfig({
 
 		footer: {
 			message: "Released under the MIT License.",
-			copyright: "Copyright © 2025-present diggo",
+			copyright: "Copyright © 2025-present Diggo",
 		},
 	},
+
+	// base: "/DUI_docs/",
 	head: [
-		["link", { rel: "shortcut icon", href: "diggo.ico" }],
-		["script", { type: "module", src: "dist/dui/dui.esm.js", async: "" }],
-		["script", { nomodule: "", src: "dist/esm/dui.js", async: "" }],
+		["link", { rel: "shortcut icon", href: "/DUI_docs/diggo.ico" }],
+		["script", { type: "module", src: "/DUI_docs/dist/dui/dui.esm.js" }],
+		["script", { nomodule: "", src: "/DUI_docs/dist/dui/dui.esm.js" }],
 	],
 });
