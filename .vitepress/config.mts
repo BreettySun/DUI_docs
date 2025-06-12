@@ -61,7 +61,6 @@ export default defineConfig({
 		},
 	},
 
-	// base: "/DUI_docs/",
 	head: [
 		["link", { rel: "shortcut icon", href: "/DUI_docs/diggo.ico" }],
 		["script", { type: "module", src: "/DUI_docs/dist/dui/dui.esm.js" }],
