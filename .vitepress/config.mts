@@ -19,6 +19,10 @@ export default defineConfig({
 					{ text: "Runtime API Examples", link: "/api-examples" },
 				],
 			},
+			{
+				// text: "快速开始",
+				items: [{ text: "快速开始", link: "/quickstart" }],
+			},
 		],
 
 		socialLinks: [
