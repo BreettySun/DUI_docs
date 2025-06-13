@@ -72,5 +72,28 @@ export default defineConfig({
 		["link", { rel: "shortcut icon", href: "/DUI_docs/diggo.ico" }],
 		["script", { type: "module", src: "/DUI_docs/dist/dui/dui.esm.js" }],
 		["script", { nomodule: "", src: "/DUI_docs/dist/dui/dui.esm.js" }],
+		[
+			"script",
+			{},
+			`
+      (function () {
+        let seed = 0;
+        function toast(type, text, duration = 3000, icon) {
+          const msg = { id: seed++, type, text, duration, icon };
+          window.dispatchEvent(new CustomEvent('d-message', {
+            detail: msg,
+            bubbles: true,
+            composed: true
+          }));
+        }
+        window.$message = {
+          success(text, duration, icon) { toast('success', text, duration, icon); },
+          info   (text, duration, icon) { toast('info',    text, duration, icon); },
+          warning(text, duration, icon) { toast('warning', text, duration, icon); },
+          error  (text, duration, icon) { toast('error',   text, duration, icon); },
+        };
+      })();
+    `,
+		],
 	],
 });
