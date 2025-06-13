@@ -2,6 +2,52 @@
 
 语义化的矢量图形。
 
+## 代码演示
+
+### 基本用法
+
+<div style="margin-top: 10px">
+  <d-icon name="heart"></d-icon>
+</div>
+
+```HTML
+<d-icon name="heart"></d-icon>
+```
+
+### 不同尺寸
+
+<div style="margin-top: 10px">
+  <d-icon name="star" size="16px"></d-icon>
+  <d-icon name="star" size="24px"></d-icon>
+  <d-icon name="star" size="32px"></d-icon>
+  <d-icon name="star" size="48px"></d-icon>
+</div>
+
+```HTML
+<d-icon name="star" size="16px"></d-icon>
+<d-icon name="star" size="24px"></d-icon>
+<d-icon name="star" size="32px"></d-icon>
+<d-icon name="star" size="48px"></d-icon>
+```
+
+### 不同颜色
+
+<div style="margin-top: 10px">
+  <d-icon name="settings" color="#1890ff"></d-icon>
+  <d-icon name="settings" color="#52c41a"></d-icon>
+  <d-icon name="settings" color="#fa8c16"></d-icon>
+  <d-icon name="settings" color="#f5222d"></d-icon>
+  <d-icon name="settings" color="#eb2f96"></d-icon>
+</div>
+
+```HTML
+<d-icon name="settings" color="#1890ff"></d-icon>
+<d-icon name="settings" color="#52c41a"></d-icon>
+<d-icon name="settings" color="#fa8c16"></d-icon>
+<d-icon name="settings" color="#f5222d"></d-icon>
+<d-icon name="settings" color="#eb2f96"></d-icon>
+```
+
 ## 图标列表
 
 <style>
