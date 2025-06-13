@@ -1,4 +1,4 @@
-# Message 全局提示
+# Message 全局提示 <Badge type="warning" text="beta" />
 
 全局展示操作反馈信息。
 

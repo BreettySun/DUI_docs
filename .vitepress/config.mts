@@ -43,6 +43,12 @@ export default defineConfig({
 							},
 						],
 					},
+					{
+						text: "Other",
+						items: [
+							{ text: "BackTop 回到顶部", link: "/components/other/backtop" },
+						],
+					},
 				],
 			},
 		],

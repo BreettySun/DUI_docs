@@ -1,4 +1,4 @@
-# Icon 图标
+# Icon 图标 <Badge type="warning" text="beta" />
 
 语义化的矢量图形。
 
