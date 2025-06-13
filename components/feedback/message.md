@@ -11,7 +11,7 @@
 
 <d-message></d-message>
 
-<script>
+<!-- <script>
   (function () {
       let seed = 0;
       function toast(type, text, duration = 3000, icon) {
@@ -29,7 +29,7 @@
       error(text, duration, icon) { toast('error', text, duration, icon); },
     };
   })();
-</script>
+</script> -->
 
 <div style="display: flex; gap: 8px;margin-top: 10px">
   <d-button type="primary" onclick="$message.info('信息', 1000, 'info')">Info</d-button>
