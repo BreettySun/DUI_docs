@@ -13,10 +13,10 @@
 ### 基本用法
 
 <d-breadcrumb>
-  <d-breadcrumb-item position="1" href="/">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
     Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">
@@ -27,10 +27,10 @@
 
 ```HTML
 <d-breadcrumb>
-  <d-breadcrumb-item position="1" href="/">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
     Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">
@@ -43,38 +43,10 @@
 ### 自定义分隔符
 
 <d-breadcrumb separator="#">
-  <d-breadcrumb-item position="1" href="/">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
     Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
-    Application Center
-  </d-breadcrumb-item>
-  <d-breadcrumb-item position="3" href="/application-list">
-    Application List
-  </d-breadcrumb-item>
-  <d-breadcrumb-item position="4">An Application</d-breadcrumb-item>
-</d-breadcrumb>
-
-```HTML
-<d-breadcrumb separator=">>">
-  <d-breadcrumb-item position="1" href="/">
-    Home
-  </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
-    Application Center
-  </d-breadcrumb-item>
-  <d-breadcrumb-item position="3" href="/application-list">
-    Application List
-  </d-breadcrumb-item>
-  <d-breadcrumb-item position="4">An Application</d-breadcrumb-item>
-</d-breadcrumb>
-```
-
-<d-breadcrumb separator=">>">
-  <d-breadcrumb-item position="1" href="/">
-    Home
-  </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">
@@ -85,10 +57,10 @@
 
 ```HTML
 <d-breadcrumb separator="#">
-  <d-breadcrumb-item position="1" href="/">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
     Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">
@@ -98,14 +70,11 @@
 </d-breadcrumb>
 ```
 
-### 带有图标的
-
-<d-breadcrumb>
-  <d-breadcrumb-item position="1" href="/">
-    <d-icon name="home" size="20px" color="#1890ff"></d-icon>
-    &nbsp;Home
+<d-breadcrumb separator=">>">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
+    Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">
@@ -115,12 +84,11 @@
 </d-breadcrumb>
 
 ```HTML
-<d-breadcrumb>
-  <d-breadcrumb-item position="1" href="/">
-    <d-icon name="home" size="20px" color="#1890ff"></d-icon>
-    &nbsp;Home
+<d-breadcrumb separator=">>">
+  <d-breadcrumb-item position="1" href="/DUI_docs/">
+    Home
   </d-breadcrumb-item>
-    <d-breadcrumb-item position="2" href="/application-center">
+  <d-breadcrumb-item position="2" href="/application-center">
     Application Center
   </d-breadcrumb-item>
   <d-breadcrumb-item position="3" href="/application-list">

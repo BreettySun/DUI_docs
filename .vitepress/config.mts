@@ -44,11 +44,28 @@ export default defineConfig({
 						],
 					},
 					{
+						text: "Data Display",
+						items: [
+							{
+								text: "Carousel 走马灯",
+								link: "/components/data-display/carousel",
+							},
+						],
+					},
+					{
 						text: "Feedback",
 						items: [
 							{
+								text: "Drawer 抽屉",
+								link: "/components/feedback/drawer",
+							},
+							{
 								text: "Message 全局提示",
 								link: "/components/feedback/message",
+							},
+							{
+								text: "Modal 对话框",
+								link: "/components/feedback/modal",
 							},
 						],
 					},
