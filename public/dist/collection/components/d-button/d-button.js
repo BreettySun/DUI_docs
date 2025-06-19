@@ -34,7 +34,7 @@ export class DButton {
             [this.customClass]: !!this.customClass,
         };
         // 允许外部传递style和class
-        return (h(Host, { key: '717c8c3d50f5cbcfc7c4d448e21499aaefcea908' }, h("button", { key: 'a241d362f37c0173ebb470f6867966054c7acb64', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, h("slot", { key: '7ad3585183b0c010e29662244839704550b44c29' }))));
+        return (h(Host, { key: '39a3b3d6d31a5b60af8fb034884ba226c9348061' }, h("button", { key: '21111d3695237b131eaf638b20fcc9a25f019ccf', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, h("slot", { key: 'a448b94dc171b3c51a55e3581c2950f680cde1d5' }))));
     }
     static get is() { return "d-button"; }
     static get encapsulation() { return "shadow"; }

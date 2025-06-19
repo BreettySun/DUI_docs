@@ -36,7 +36,7 @@ export class DMessage {
         this.el = document.querySelector("d-message");
     }
     render() {
-        return (h(Host, { key: '0b85dc0c942757ddde88527dff8933ca19ee060b' }, h("div", { key: '64ef2ba667cb6a0ffe1fc0d73a8f36070e834dc9', class: "d-message-container" }, this.messages.map((message) => (h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, h("div", { class: "d-message__content" }, message.icon && (h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), h("span", null, message.text))))))));
+        return (h(Host, { key: 'c3758b2674bd84c4fd484158caf11b15af52c488' }, h("div", { key: 'cfc11f52e414090a6ec23c006203bbd1849e28bc', class: "d-message-container" }, this.messages.map((message) => (h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, h("div", { class: "d-message__content" }, message.icon && (h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), h("span", null, message.text))))))));
     }
     static get is() { return "d-message"; }
     static get encapsulation() { return "shadow"; }

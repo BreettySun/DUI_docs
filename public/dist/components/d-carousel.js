@@ -133,7 +133,7 @@ const DCarousel$1 = /*@__PURE__*/ proxyCustomElement(class DCarousel extends H {
                 height: "100%",
             });
         }
-        return (h(Host, { key: '10e91c97b3eb663829ccedcff9501fc3b256bece' }, h("div", { key: '7b7fb08006ae6a6f9f34512ec0e6d09f04f05153', class: "carousel-container", part: "carousel" }, h("slot", { key: '83fb02bd372796e0d7911559e92f6eeb60e2a4f7' })), this.itemsCount > 0 && (h("div", { key: '20ee333eadff20271b8372900d67f5668262c23c', class: "carousel-indicators", part: "indicators", style: {
+        return (h(Host, { key: '6eb66c0da52b3d0f0608dcb0b32961b9e3de8664' }, h("div", { key: '15589adeca999f3ba44d18c0122d2b888d2830e0', class: "carousel-container", part: "carousel" }, h("slot", { key: '3a8536dbd0e5ead24ac587eec98cd85d415423cd' })), this.itemsCount > 0 && (h("div", { key: '579eb73ccdc1a7b625aef383526e58ecd9d8ba8a', class: "carousel-indicators", part: "indicators", style: {
                 display: "flex",
                 position: "absolute",
                 zIndex: "10",

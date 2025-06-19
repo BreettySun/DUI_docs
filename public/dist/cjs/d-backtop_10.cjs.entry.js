@@ -51,6 +51,41 @@ const DBacktop = class {
 };
 DBacktop.style = dBacktopCss;
 
+const dBreadcrumbCss$1 = ":host{display:block}.breadcrumb{display:flex;flex-wrap:wrap;padding:0.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#f8f9fa;border-radius:0.25rem}.breadcrumb-item{display:flex;align-items:center}.breadcrumb-item+.breadcrumb-item{padding-left:0.5rem}.breadcrumb-slash{margin:0 0.5rem;color:#6c757d;display:flex;align-items:center}.breadcrumb-item a{color:#007bff;text-decoration:none;display:flex;align-items:center}.breadcrumb-item a:hover{color:#0056b3;text-decoration:underline}.breadcrumb-item:last-child{color:#6c757d}.breadcrumb-item span{display:flex;align-items:center}";
+
+const DBreadcrumb = class {
+    constructor(hostRef) {
+        index.registerInstance(this, hostRef);
+    }
+    get el() { return index.getElement(this); }
+    separator = "/";
+    render() {
+        return (index.h(index.Host, { key: '0605b766de7e95e92d74038ebd57a617e8c743e3' }, index.h("nav", { key: '5ad4c80b27f81beacbf5e197c9c1dd51058897e3', "aria-label": "breadcrumb" }, index.h("ul", { key: 'c98a38cb9e2a7c5006ee8acf4bbb90253c5a6218', class: "breadcrumb", itemscope: true, itemtype: "https://schema.org/BreadcrumbList" }, index.h("slot", { key: 'e1f33cd3b1681c5eed26790d56c08aee1c583acc' })))));
+    }
+};
+DBreadcrumb.style = dBreadcrumbCss$1;
+
+const dBreadcrumbCss = ":host{display:block}.breadcrumb{display:flex;flex-wrap:wrap;padding:0.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#f8f9fa;border-radius:0.25rem}.breadcrumb-item{display:flex;align-items:center}.breadcrumb-item+.breadcrumb-item{padding-left:0.5rem}.breadcrumb-slash{margin:0 0.5rem;color:#6c757d;display:flex;align-items:center}.breadcrumb-item a{color:#007bff;text-decoration:none;display:flex;align-items:center}.breadcrumb-item a:hover{color:#0056b3;text-decoration:underline}.breadcrumb-item:last-child{color:#6c757d}.breadcrumb-item span{display:flex;align-items:center}";
+
+const DBreadcrumbItem = class {
+    constructor(hostRef) {
+        index.registerInstance(this, hostRef);
+    }
+    get el() { return index.getElement(this); }
+    href;
+    position;
+    get separator() {
+        const breadcrumb = this.el.closest("d-breadcrumb");
+        return breadcrumb ? breadcrumb.separator : "/";
+    }
+    render() {
+        const isFirst = !this.el.previousElementSibling;
+        const content = this.el.innerHTML;
+        return (index.h(index.Host, { key: 'a3d35fb94fe7eade82ab49d09bb54e18576f94c0' }, index.h("li", { key: '4526f1e828b1daa26612a2121a25ac5995f16330', class: "breadcrumb-item", itemprop: "itemListElement", itemscope: true, itemtype: "https://schema.org/ListItem" }, !isFirst && index.h("span", { key: '7a52d9aa5ceab0ca751da88e071a825ff748b0a9', class: "breadcrumb-slash" }, this.separator), this.href ? (index.h("a", { itemprop: "item", href: this.href }, index.h("span", { itemprop: "name", innerHTML: content }))) : (index.h("span", { itemprop: "name", innerHTML: content })), index.h("meta", { key: '9613916fec6b121c5eb433f36adb9eb177b64c31', itemprop: "position", content: String(this.position) }))));
+    }
+};
+DBreadcrumbItem.style = dBreadcrumbCss;
+
 const dButtonCss = ":host{display:block}.btn{display:inline-flex;align-items:center;justify-content:center;border:none;border-radius:4px;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen,\n\t\tUbuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;font-weight:500;transition:all 0.2s ease;outline:none}.btn>*{display:flex;align-items:center}.btn-primary{background-color:#1890ff;color:white}.btn-primary:hover{background-color:#40a9ff}.btn-secondary{background-color:#f0f0f0;color:rgba(0, 0, 0, 0.85)}.btn-secondary:hover{background-color:#e0e0e0}.btn-danger{background-color:#ff4d4f;color:white}.btn-danger:hover{background-color:#ff7875}.btn-text{background-color:transparent;color:rgba(0, 0, 0, 0.85)}.btn-text:hover{background-color:rgba(0, 0, 0, 0.05)}.btn-small{height:24px;padding:0 7px;font-size:12px}.btn-medium{height:32px;padding:0 15px;font-size:14px}.btn-large{height:40px;padding:0 15px;font-size:16px}.btn-disabled{opacity:0.5;cursor:not-allowed}.btn-disabled:hover{opacity:0.5}.btn-round{border-radius:50%;padding:0}.btn-round.btn-small{width:24px}.btn-round.btn-medium{width:32px}.btn-round.btn-large{width:40px}";
 
 const DButton = class {
@@ -91,7 +126,7 @@ const DButton = class {
             [this.customClass]: !!this.customClass,
         };
         // 允许外部传递style和class
-        return (index.h(index.Host, { key: '717c8c3d50f5cbcfc7c4d448e21499aaefcea908' }, index.h("button", { key: 'a241d362f37c0173ebb470f6867966054c7acb64', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, index.h("slot", { key: '7ad3585183b0c010e29662244839704550b44c29' }))));
+        return (index.h(index.Host, { key: '39a3b3d6d31a5b60af8fb034884ba226c9348061' }, index.h("button", { key: '21111d3695237b131eaf638b20fcc9a25f019ccf', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, index.h("slot", { key: 'a448b94dc171b3c51a55e3581c2950f680cde1d5' }))));
     }
 };
 DButton.style = dButtonCss;
@@ -227,7 +262,7 @@ const DCarousel = class {
                 height: "100%",
             });
         }
-        return (index.h(index.Host, { key: '10e91c97b3eb663829ccedcff9501fc3b256bece' }, index.h("div", { key: '7b7fb08006ae6a6f9f34512ec0e6d09f04f05153', class: "carousel-container", part: "carousel" }, index.h("slot", { key: '83fb02bd372796e0d7911559e92f6eeb60e2a4f7' })), this.itemsCount > 0 && (index.h("div", { key: '20ee333eadff20271b8372900d67f5668262c23c', class: "carousel-indicators", part: "indicators", style: {
+        return (index.h(index.Host, { key: '6eb66c0da52b3d0f0608dcb0b32961b9e3de8664' }, index.h("div", { key: '15589adeca999f3ba44d18c0122d2b888d2830e0', class: "carousel-container", part: "carousel" }, index.h("slot", { key: '3a8536dbd0e5ead24ac587eec98cd85d415423cd' })), this.itemsCount > 0 && (index.h("div", { key: '579eb73ccdc1a7b625aef383526e58ecd9d8ba8a', class: "carousel-indicators", part: "indicators", style: {
                 display: "flex",
                 position: "absolute",
                 zIndex: "10",
@@ -275,7 +310,7 @@ const DDivider = class {
      */
     margin = "24px 0";
     render() {
-        return (index.h(index.Host, { key: 'a260f99ef7bc1f51bf93e704a2c585f9ba3a93d5', style: {
+        return (index.h(index.Host, { key: '9e0562ecab182dac555f1b9e1bddb001639a7d16', style: {
                 "--divider-color": this.color,
                 "--divider-size": this.size,
                 "--divider-margin": this.margin,
@@ -283,7 +318,7 @@ const DDivider = class {
                 divider: true,
                 [`divider-${this.direction}`]: true,
                 [`divider-${this.lineType}`]: true,
-            } }, index.h("slot", { key: 'e00a5989eb7756afd4aa17dc73a3e690ffa1ed57' })));
+            } }, index.h("slot", { key: '8f45d0839b6bde50a9603b5ac32ca7295e0bcd2d' })));
     }
 };
 DDivider.style = dDividerCss;
@@ -317,14 +352,14 @@ const DDrawer = class {
         }
     }
     render() {
-        return (index.h(index.Host, { key: '9cdcfabff9aea6bc3bc56a7ebfae2aeedf29c044', show: this.visible }, index.h("div", { key: 'ec592bc118d7b40080a008f4b934021224ad8526', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: '3605a19c4b64adb73f3803a2b37fc90acd4807a5', class: "ivy-drawer", style: {
+        return (index.h(index.Host, { key: '47a9c08a5b926555e214751aa6fb9bb859f82993', show: this.visible }, index.h("div", { key: 'c7e331eb4ef9881031b5789e5f4f9fdd618c2bb4', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: 'b49c7c9d5731178b504d8aa3ce1dc304f42e4d6e', class: "ivy-drawer", style: {
                 width: ["left", "right"].includes(this.placement)
                     ? this.width
                     : "100%",
                 height: ["top", "bottom"].includes(this.placement)
                     ? this.width
                     : "100%",
-            } }, this.renderHeader(), index.h("div", { key: '82588e6f41a4bb9b6a923e895908680077a42d2b', class: "ivy-drawer-body" }, index.h("slot", { key: '9d5e23be591910088d5d93af00f09e977ddf34cd' })))));
+            } }, this.renderHeader(), index.h("div", { key: '2b5e2e1ca1623ca63c794e11fa0f35f16cfae56c', class: "ivy-drawer-body" }, index.h("slot", { key: '10cdf2e12f077a820c95598f663ee23da6ae06fa' })))));
     }
     closed;
     closeHandler() {
@@ -710,7 +745,7 @@ const DIcon = class {
             transform: this.rotate ? `rotate(${this.rotate}deg)` : "",
             animation: this.spin ? "spin 2s linear infinite" : "none",
         };
-        return (index.h(index.Host, { key: 'cb10fa5abb02be1e604c1ac9ec3b527ab0e34bd2', onClick: this.handleClick }, index.h("svg", { key: 'f5e672eae923c7669bd0802c3ea6c0c18ab128b2', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle }, index.h("g", { key: 'b9ac5b3ee611511a307666fec4abc2d827cf928e', fill: this.color }, this.renderIcon()))));
+        return (index.h(index.Host, { key: '05162437cc99cf1f4e98021605c814931303e788', onClick: this.handleClick }, index.h("svg", { key: '79eaee1f3dc377ac5e1ee043222681d4b5128157', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, index.h("g", { key: '02de353e73fdf84abfe0821fa1202e0ee51fe612', fill: this.color }, this.renderIcon()))));
     }
 };
 DIcon.style = dIconCss;
@@ -757,7 +792,7 @@ const DMessage = class {
         this.el = document.querySelector("d-message");
     }
     render() {
-        return (index.h(index.Host, { key: '0b85dc0c942757ddde88527dff8933ca19ee060b' }, index.h("div", { key: '64ef2ba667cb6a0ffe1fc0d73a8f36070e834dc9', class: "d-message-container" }, this.messages.map((message) => (index.h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, index.h("div", { class: "d-message__content" }, message.icon && (index.h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), index.h("span", null, message.text))))))));
+        return (index.h(index.Host, { key: 'c3758b2674bd84c4fd484158caf11b15af52c488' }, index.h("div", { key: 'cfc11f52e414090a6ec23c006203bbd1849e28bc', class: "d-message-container" }, this.messages.map((message) => (index.h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, index.h("div", { class: "d-message__content" }, message.icon && (index.h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), index.h("span", null, message.text))))))));
     }
 };
 DMessage.style = dMessageCss;
@@ -796,7 +831,7 @@ const DModal = class {
         }
     }
     render() {
-        return (index.h(index.Host, { key: 'a1269ec58619cf0a0bed3dde09e21cd0dc6a7450', show: this.show }, index.h("div", { key: '078eeeecfc173b1b02a3e4dd4fc126d61152af08', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: '4fc01a01a744266674ad5a1448c5ce545f26d20f', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), index.h("div", { key: '79f26fdbcb0a633c821f55fcf1adbae5bc16f0a2', class: "ivy-modal-body" }, index.h("slot", { key: '90db5816cafd295c75943a106220fd2c05cb3a59' })), this.renderFooter())));
+        return (index.h(index.Host, { key: '8f5f2997ab138f6bf65b77da94a2c853a04fb25d', show: this.show }, index.h("div", { key: 'c8f000be9cad3dcb54354cc3ca1638946a242052', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: 'ee0ec14afcc65410c56ae0f285f1ac6e8b94fbe0', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), index.h("div", { key: '663ce79bda1c1be3d1f15d00ff150500f501d888', class: "ivy-modal-body" }, index.h("slot", { key: '82585d9c2fe4545c53db69f64816c1f8494cde96' })), this.renderFooter())));
     }
     onClose;
     onConfirm;
@@ -834,6 +869,8 @@ const DModal = class {
 DModal.style = dModalCss;
 
 exports.d_backtop = DBacktop;
+exports.d_breadcrumb = DBreadcrumb;
+exports.d_breadcrumb_item = DBreadcrumbItem;
 exports.d_button = DButton;
 exports.d_carousel = DCarousel;
 exports.d_divider = DDivider;
@@ -841,6 +878,6 @@ exports.d_drawer = DDrawer;
 exports.d_icon = DIcon;
 exports.d_message = DMessage;
 exports.d_modal = DModal;
-//# sourceMappingURL=d-backtop.d-button.d-carousel.d-divider.d-drawer.d-icon.d-message.d-modal.entry.cjs.js.map
+//# sourceMappingURL=d-backtop.d-breadcrumb.d-breadcrumb-item.d-button.d-carousel.d-divider.d-drawer.d-icon.d-message.d-modal.entry.cjs.js.map
 
-//# sourceMappingURL=d-backtop_8.cjs.entry.js.map
+//# sourceMappingURL=d-backtop_10.cjs.entry.js.map
