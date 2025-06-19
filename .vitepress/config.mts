@@ -35,6 +35,15 @@ export default defineConfig({
 						],
 					},
 					{
+						text: "Navigation",
+						items: [
+							{
+								text: "Breadcrumb 面包屑",
+								link: "/components/navigation/breadcrumb",
+							},
+						],
+					},
+					{
 						text: "Feedback",
 						items: [
 							{

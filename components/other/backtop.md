@@ -25,7 +25,7 @@
 
 ```HTML
 <d-backtop right="40px" bottom="100px">
-  <d-icon name="arrow-up" color="#909399" />
+  <d-icon name="swipe-up" color="#909399" />
 </d-backtop>
 ```
 
