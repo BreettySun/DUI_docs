@@ -355,7 +355,7 @@ export class DIcon {
             transform: this.rotate ? `rotate(${this.rotate}deg)` : "",
             animation: this.spin ? "spin 2s linear infinite" : "none",
         };
-        return (h(Host, { key: '05162437cc99cf1f4e98021605c814931303e788', onClick: this.handleClick }, h("svg", { key: '79eaee1f3dc377ac5e1ee043222681d4b5128157', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, h("g", { key: '02de353e73fdf84abfe0821fa1202e0ee51fe612', fill: this.color }, this.renderIcon()))));
+        return (h(Host, { key: '9cd3e1b868f1f59a4e18513077b88333ce12e74a', onClick: this.handleClick }, h("svg", { key: 'cfe2469dd8ebdbeed82621275278fae2bee2dd1f', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, h("g", { key: '715092f9f677a4b7680d3cc8607de528285cebab', fill: this.color }, this.renderIcon()))));
     }
     static get is() { return "d-icon"; }
     static get encapsulation() { return "shadow"; }

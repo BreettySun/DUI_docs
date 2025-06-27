@@ -21,7 +21,7 @@ export class DDivider {
      */
     margin = "24px 0";
     render() {
-        return (h(Host, { key: '9e0562ecab182dac555f1b9e1bddb001639a7d16', style: {
+        return (h(Host, { key: 'a62e7b6998530a6f48983f1c8348fd0d0e0a986f', style: {
                 "--divider-color": this.color,
                 "--divider-size": this.size,
                 "--divider-margin": this.margin,
@@ -29,7 +29,7 @@ export class DDivider {
                 divider: true,
                 [`divider-${this.direction}`]: true,
                 [`divider-${this.lineType}`]: true,
-            } }, h("slot", { key: '8f45d0839b6bde50a9603b5ac32ca7295e0bcd2d' })));
+            } }, h("slot", { key: '7d5ea2245ff5fb3f83b5ad15819dafa7594ba592' })));
     }
     static get is() { return "d-divider"; }
     static get encapsulation() { return "shadow"; }

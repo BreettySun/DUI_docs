@@ -1,4 +1,4 @@
-import { D as DIcon$1, d as defineCustomElement$1 } from './p-mWWh2AIB.js';
+import { D as DIcon$1, d as defineCustomElement$1 } from './p-Csi4oSZD.js';
 
 const DIcon = DIcon$1;
 const defineCustomElement = defineCustomElement$1;

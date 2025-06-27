@@ -1,5 +1,6 @@
 {
   "entries": [
+    "components/d-collapse/d-collapse.js",
     "components/d-backtop/d-backtop.js",
     "components/d-breadcrumb/d-breadcrumb-item.js",
     "components/d-breadcrumb/d-breadcrumb.js",

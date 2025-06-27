@@ -31,14 +31,14 @@ const DDrawer$1 = /*@__PURE__*/ proxyCustomElement(class DDrawer extends H {
         }
     }
     render() {
-        return (h(Host, { key: '47a9c08a5b926555e214751aa6fb9bb859f82993', show: this.visible }, h("div", { key: 'c7e331eb4ef9881031b5789e5f4f9fdd618c2bb4', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: 'b49c7c9d5731178b504d8aa3ce1dc304f42e4d6e', class: "ivy-drawer", style: {
+        return (h(Host, { key: '53f6a8790c716b46e857185bac5081759c21053b', show: this.visible }, h("div", { key: 'ee18d9d70f463e4681b6bed7e84a55db9f0c8f1b', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: '37e963019c04c1333418685ba0ea41905fb4519d', class: "ivy-drawer", style: {
                 width: ["left", "right"].includes(this.placement)
                     ? this.width
                     : "100%",
                 height: ["top", "bottom"].includes(this.placement)
                     ? this.width
                     : "100%",
-            } }, this.renderHeader(), h("div", { key: '2b5e2e1ca1623ca63c794e11fa0f35f16cfae56c', class: "ivy-drawer-body" }, h("slot", { key: '10cdf2e12f077a820c95598f663ee23da6ae06fa' })))));
+            } }, this.renderHeader(), h("div", { key: 'e0e3d1f7df86b05f2727fd404aae2d6734744281', class: "ivy-drawer-body" }, h("slot", { key: 'e67387de229fcef90c5074320942e96105056c1f' })))));
     }
     closed;
     closeHandler() {

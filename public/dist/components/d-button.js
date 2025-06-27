@@ -42,7 +42,7 @@ const DButton$1 = /*@__PURE__*/ proxyCustomElement(class DButton extends H {
             [this.customClass]: !!this.customClass,
         };
         // 允许外部传递style和class
-        return (h(Host, { key: '39a3b3d6d31a5b60af8fb034884ba226c9348061' }, h("button", { key: '21111d3695237b131eaf638b20fcc9a25f019ccf', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, h("slot", { key: 'a448b94dc171b3c51a55e3581c2950f680cde1d5' }))));
+        return (h(Host, { key: 'f7ae88d94851b74c66a773edcd23642e7c62844d' }, h("button", { key: '36ff3beef7d6dd4b0586da6807afb722ebe4d78a', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, h("slot", { key: '133cbf779159b897e5159ed65f8d89c90997eeec' }))));
     }
     static get style() { return dButtonCss; }
 }, [1, "d-button", {

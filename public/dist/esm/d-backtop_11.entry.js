@@ -1,12 +1,469 @@
-import { p as proxyCustomElement, H, d as createEvent, h, c as Host } from './p-CKuW6hQ4.js';
+import { r as registerInstance, h, H as Host, a as getElement, c as createEvent } from './index-D1K1rt23.js';
+
+const dBacktopCss = ":host{display:block}.d-backtop{position:fixed;display:flex;align-items:center;justify-content:center;width:40px;height:40px;background-color:#fff;color:#909399;border-radius:50%;box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);cursor:pointer;opacity:0;transition:opacity 0.3s;z-index:100}.d-backtop:hover{background-color:#f2f6fc;color:#409eff}.d-backtop--visible{opacity:1}";
+
+const DBacktop = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    right = "40px";
+    bottom = "40px";
+    visibilityHeight = 400;
+    target = "";
+    visible = false;
+    targetElement = window;
+    componentDidLoad() {
+        if (this.target) {
+            const targetEl = document.querySelector(this.target);
+            if (targetEl) {
+                this.targetElement = targetEl;
+            }
+        }
+    }
+    handleScroll() {
+        const scrollTop = this.targetElement === window
+            ? window.scrollY
+            : this.targetElement.scrollTop;
+        this.visible = scrollTop > this.visibilityHeight;
+    }
+    handleClick = () => {
+        if (this.targetElement === window) {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+        else {
+            this.targetElement.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    };
+    render() {
+        return (h(Host, { key: '105684e4bf7d4b730967ac0c5da07d6b027d4a2f' }, h("div", { key: '1755f039f7c35192d91ce6745ddcee58cabd50a8', class: `d-backtop ${this.visible ? "d-backtop--visible" : ""}`, style: {
+                right: this.right,
+                bottom: this.bottom,
+            }, onClick: this.handleClick }, h("slot", { key: '1a21d042cc3d7baab1fe253a6a022ba979b1b56b' }))));
+    }
+};
+DBacktop.style = dBacktopCss;
+
+const dBreadcrumbCss$1 = ":host{display:block}.breadcrumb{display:flex;flex-wrap:wrap;padding:0.75rem 1rem;margin-bottom:1rem;list-style:none;border-radius:0.25rem}.breadcrumb-item{display:flex;align-items:center}.breadcrumb-item+.breadcrumb-item{padding-left:0.5rem}.breadcrumb-slash{margin:0 0.5rem;color:#6c757d;display:flex;align-items:center}.breadcrumb-item a{color:#007bff;text-decoration:none;display:flex;align-items:center}.breadcrumb-item a:hover{color:#0056b3;text-decoration:underline}.breadcrumb-item:last-child{color:#6c757d}.breadcrumb-item span{display:flex;align-items:center}";
+
+const DBreadcrumb = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    get el() { return getElement(this); }
+    separator = "/";
+    render() {
+        return (h(Host, { key: '8468b940e400b17a0beb1f92fd47f17c692bde58' }, h("nav", { key: '434f8ac7c78f53ba189401a5f7fc077e5476b076', "aria-label": "breadcrumb" }, h("ul", { key: '861f7499165e68feb631205a6475aa9e5246f033', class: "breadcrumb", itemscope: true, itemtype: "https://schema.org/BreadcrumbList" }, h("slot", { key: 'a266463f32e11c1a7388f5209f157816975eeb8c' })))));
+    }
+};
+DBreadcrumb.style = dBreadcrumbCss$1;
+
+const dBreadcrumbCss = ":host{display:block}.breadcrumb{display:flex;flex-wrap:wrap;padding:0.75rem 1rem;margin-bottom:1rem;list-style:none;border-radius:0.25rem}.breadcrumb-item{display:flex;align-items:center}.breadcrumb-item+.breadcrumb-item{padding-left:0.5rem}.breadcrumb-slash{margin:0 0.5rem;color:#6c757d;display:flex;align-items:center}.breadcrumb-item a{color:#007bff;text-decoration:none;display:flex;align-items:center}.breadcrumb-item a:hover{color:#0056b3;text-decoration:underline}.breadcrumb-item:last-child{color:#6c757d}.breadcrumb-item span{display:flex;align-items:center}";
+
+const DBreadcrumbItem = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    get el() { return getElement(this); }
+    href;
+    position;
+    get separator() {
+        const breadcrumb = this.el.closest("d-breadcrumb");
+        return breadcrumb ? breadcrumb.separator : "/";
+    }
+    render() {
+        const isFirst = !this.el.previousElementSibling;
+        const content = this.el.innerHTML;
+        return (h(Host, { key: '17cbb5f64eb50d969b68902275c400b99d5f3bfa' }, h("li", { key: 'ba4c934a11cec2ede26d056c2cbd672c421c401b', class: "breadcrumb-item", itemprop: "itemListElement", itemscope: true, itemtype: "https://schema.org/ListItem" }, !isFirst && h("span", { key: '52833260b8da2667113be5953b803de1504ea31a', class: "breadcrumb-slash" }, this.separator), this.href ? (h("a", { itemprop: "item", href: this.href }, h("span", { itemprop: "name", innerHTML: content }))) : (h("span", { itemprop: "name", innerHTML: content })), h("meta", { key: 'f909244b6afac07dc553372f980486d887d34f6f', itemprop: "position", content: String(this.position) }))));
+    }
+};
+DBreadcrumbItem.style = dBreadcrumbCss;
+
+const dButtonCss = ":host{display:block}.btn{display:inline-flex;align-items:center;justify-content:center;border:none;border-radius:4px;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen,\n\t\tUbuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;font-weight:500;transition:all 0.2s ease;outline:none}.btn>*{display:flex;align-items:center}.btn-primary{background-color:#1890ff;color:white}.btn-primary:hover{background-color:#40a9ff}.btn-secondary{background-color:#f0f0f0;color:rgba(0, 0, 0, 0.85)}.btn-secondary:hover{background-color:#e0e0e0}.btn-danger{background-color:#ff4d4f;color:white}.btn-danger:hover{background-color:#ff7875}.btn-text{background-color:transparent;color:rgba(0, 0, 0, 0.85)}.btn-text:hover{background-color:rgba(0, 0, 0, 0.05)}.btn-small{height:24px;padding:0 7px;font-size:12px}.btn-medium{height:32px;padding:0 15px;font-size:14px}.btn-large{height:40px;padding:0 15px;font-size:16px}.btn-disabled{opacity:0.5;cursor:not-allowed}.btn-disabled:hover{opacity:0.5}.btn-round{border-radius:50%;padding:0}.btn-round.btn-small{width:24px}.btn-round.btn-medium{width:32px}.btn-round.btn-large{width:40px}";
+
+const DButton = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    /**
+     * 按钮类型
+     */
+    type = "primary";
+    /**
+     * 按钮尺寸
+     */
+    size = "medium";
+    /**
+     * 是否禁用
+     */
+    disabled = false;
+    /**
+     * 是否为圆形按钮
+     */
+    round = false;
+    /**
+     * 自定义类名
+     */
+    customClass = "";
+    /**
+     * 自定义内联样式
+     */
+    customStyle = {};
+    render() {
+        const classes = {
+            btn: true,
+            [`btn-${this.type}`]: true,
+            [`btn-${this.size}`]: true,
+            "btn-disabled": this.disabled,
+            "btn-round": this.round,
+            [this.customClass]: !!this.customClass,
+        };
+        // 允许外部传递style和class
+        return (h(Host, { key: 'f7ae88d94851b74c66a773edcd23642e7c62844d' }, h("button", { key: '36ff3beef7d6dd4b0586da6807afb722ebe4d78a', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, h("slot", { key: '133cbf779159b897e5159ed65f8d89c90997eeec' }))));
+    }
+};
+DButton.style = dButtonCss;
+
+const dCarouselCss = ":host{display:block;position:relative}.carousel-container{width:100%;height:100%;position:relative;overflow:hidden}.carousel-controls{position:absolute;z-index:10}.arrow-control{background:rgba(0, 0, 0, 0.3);color:white;border:none;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color 0.3s;padding:0}.arrow-control:hover{background:rgba(0, 0, 0, 0.6)}:host([indicator-position=\"top\"]) .carousel-controls,:host([indicator-position=\"bottom\"]) .carousel-controls{display:flex;justify-content:space-between;width:100%;top:50%;transform:translateY(-50%);padding:0 10px}:host([indicator-position=\"left\"]) .carousel-controls,:host([indicator-position=\"right\"]) .carousel-controls{display:flex;flex-direction:column;height:100%;justify-content:space-between;top:0;padding:10px 0}:host([indicator-position=\"left\"]) .carousel-controls{right:10px}:host([indicator-position=\"right\"]) .carousel-controls{left:10px}:host([indicator-position=\"top\"]) .carousel-controls{bottom:10px}:host([indicator-position=\"bottom\"]) .carousel-controls{top:10px}.carousel-indicators{display:flex;position:absolute;z-index:10}.carousel-indicators-top,.carousel-indicators-bottom{flex-direction:row;justify-content:center;width:100%;left:0;}.carousel-indicators-top{top:10px}.carousel-indicators-bottom{bottom:10px}.carousel-indicators-left,.carousel-indicators-right{flex-direction:column;justify-content:center;height:100%;top:0;}.carousel-indicators-left{left:10px}.carousel-indicators-right{right:10px}.indicator{width:10px;height:10px;border-radius:50%;background-color:rgba(255, 255, 255, 0.5);margin:5px;cursor:pointer;transition:background-color 0.3s}.indicator.active{background-color:white}";
+
+const DCarousel = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    currentIndex = 0;
+    itemsCount = 0;
+    get el() { return getElement(this); }
+    /**
+     * 是否自动播放
+     */
+    autoplay = false;
+    /**
+     * 自动播放间隔时间（毫秒）
+     */
+    delay = 3000;
+    /**
+     * 指示器位置，可选值：top、bottom、left、right
+     */
+    indicatorPosition = "bottom";
+    items = [];
+    autoplayInterval;
+    componentDidLoad() {
+        // 获取所有子元素作为轮播项
+        this.items = Array.from(this.el.children);
+        // 更新状态以触发重新渲染
+        this.itemsCount = this.items.length;
+        // 显示第一个轮播项
+        this.showSlide(this.currentIndex);
+        // 如果启用了自动播放，开始自动播放
+        if (this.autoplay) {
+            this.startAutoplay();
+        }
+    }
+    disconnectedCallback() {
+        this.stopAutoplay();
+    }
+    autoplayChanged(newValue) {
+        if (newValue) {
+            this.startAutoplay();
+        }
+        else {
+            this.stopAutoplay();
+        }
+    }
+    delayChanged() {
+        if (this.autoplay) {
+            this.startAutoplay(); // 重新启动自动播放以应用新的延迟
+        }
+    }
+    startAutoplay() {
+        this.stopAutoplay(); // 先停止之前的自动播放
+        this.autoplayInterval = window.setInterval(() => {
+            this.nextSlide();
+        }, this.delay);
+    }
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            window.clearInterval(this.autoplayInterval);
+        }
+    }
+    showSlide(index) {
+        // 确保索引在有效范围内
+        if (this.items.length === 0)
+            return;
+        this.currentIndex = index;
+        // 隐藏所有轮播项，只显示当前索引的项
+        this.items.forEach((item, i) => {
+            item.style.display = i === index ? "block" : "none";
+        });
+    }
+    /**
+     * 手动切换到下一张幻灯片
+     */
+    async nextSlide() {
+        if (this.items.length === 0)
+            return;
+        this.currentIndex = (this.currentIndex + 1) % this.items.length;
+        this.showSlide(this.currentIndex);
+    }
+    /**
+     * 手动切换到上一张幻灯片
+     */
+    async prevSlide() {
+        if (this.items.length === 0)
+            return;
+        this.currentIndex =
+            (this.currentIndex - 1 + this.items.length) % this.items.length;
+        this.showSlide(this.currentIndex);
+    }
+    /**
+     * 手动切换到指定索引的幻灯片
+     * @param index 幻灯片索引
+     */
+    async goToSlide(index) {
+        if (index >= 0 && index < this.items.length) {
+            this.showSlide(index);
+        }
+    }
+    render() {
+        // 计算指示器位置的样式
+        const indicatorStyle = {};
+        if (this.indicatorPosition === "top") {
+            Object.assign(indicatorStyle, {
+                top: "10px",
+                left: "0",
+                width: "100%",
+            });
+        }
+        else if (this.indicatorPosition === "bottom") {
+            Object.assign(indicatorStyle, {
+                bottom: "10px",
+                left: "0",
+                width: "100%",
+            });
+        }
+        else if (this.indicatorPosition === "left") {
+            Object.assign(indicatorStyle, {
+                left: "10px",
+                top: "0",
+                height: "100%",
+            });
+        }
+        else if (this.indicatorPosition === "right") {
+            Object.assign(indicatorStyle, {
+                right: "10px",
+                top: "0",
+                height: "100%",
+            });
+        }
+        return (h(Host, { key: '77df2fab69d4e6c0e6c2b52482b21256c9357385' }, h("div", { key: '88a6027fec31a372c8d9c08f93bdeb931bb7a8c2', class: "carousel-container", part: "carousel" }, h("slot", { key: '4468b06e97d7658cd0b768c94df3110b7da241f0' })), this.itemsCount > 0 && (h("div", { key: '4e7d57957e57f0ad1937e9878aeac0384f6d6acc', class: "carousel-indicators", part: "indicators", style: {
+                display: "flex",
+                position: "absolute",
+                zIndex: "10",
+                flexDirection: this.indicatorPosition === "left" ||
+                    this.indicatorPosition === "right"
+                    ? "column"
+                    : "row",
+                justifyContent: "center",
+                ...indicatorStyle,
+            } }, Array.from({ length: this.itemsCount }).map((_, i) => (h("div", { class: `indicator ${i === this.currentIndex ? "active" : ""}`, part: `indicator ${i === this.currentIndex
+                ? "indicator-active"
+                : ""}`, onClick: () => this.showSlide(i) })))))));
+    }
+    static get watchers() { return {
+        "autoplay": ["autoplayChanged"],
+        "delay": ["delayChanged"]
+    }; }
+};
+DCarousel.style = dCarouselCss;
+
+const dCollapseCss = ":host{display:block;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n\t\t\"Helvetica Neue\", Arial, sans-serif}.d-collapse{border:1px solid #e4e7ed;border-radius:4px;background-color:#fff}.d-collapse-item{border-bottom:1px solid #e4e7ed;transition:all 0.3s ease;animation:fadeIn 0.3s ease}.d-collapse-item:last-child{border-bottom:none}.d-collapse-item.disabled{opacity:0.6;cursor:not-allowed}.d-collapse-item.disabled .d-collapse-header{cursor:not-allowed}.d-collapse-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background-color:#fafafa;cursor:pointer;transition:background-color 0.3s ease;user-select:none}.d-collapse-header:hover{background-color:#f5f5f5}.d-collapse-title{font-size:14px;font-weight:500;color:#303133;flex:1}.d-collapse-arrow{display:flex;align-items:center;justify-content:center;width:16px;height:16px;color:#909399;transition:transform 0.3s ease}.d-collapse-item.active .d-collapse-arrow{transform:rotate(180deg);color:#1890ff}.d-collapse-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease;background-color:#fff}.d-collapse-item.active .d-collapse-content{max-height:500px}.d-collapse-content-inner{padding:16px;color:#606266;font-size:14px;line-height:1.6}@keyframes fadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}@media (max-width: 768px){.d-collapse-header{padding:10px 12px}.d-collapse-content-inner{padding:12px}.d-collapse-title{font-size:13px}}";
+
+const DCollapse = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.change = createEvent(this, "change");
+    }
+    items = [];
+    accordion = false; // 手风琴模式，同时只能展开一个
+    defaultActiveKeys = []; // 默认展开的项
+    activeKeys = [];
+    parsedItems = [];
+    change;
+    componentWillLoad() {
+        this.parseProps();
+    }
+    parseProps() {
+        // 解析items属性
+        if (typeof this.items === "string") {
+            try {
+                this.parsedItems = JSON.parse(this.items);
+            }
+            catch (e) {
+                console.error("Failed to parse items:", e);
+                this.parsedItems = [];
+            }
+        }
+        else {
+            this.parsedItems = this.items || [];
+        }
+        // 解析defaultActiveKeys属性
+        if (typeof this.defaultActiveKeys === "string") {
+            try {
+                this.activeKeys = JSON.parse(this.defaultActiveKeys);
+            }
+            catch (e) {
+                console.error("Failed to parse defaultActiveKeys:", e);
+                this.activeKeys = [];
+            }
+        }
+        else {
+            this.activeKeys = [...(this.defaultActiveKeys || [])];
+        }
+    }
+    toggleItem = (itemId) => {
+        if (this.parsedItems.find((item) => item.id === itemId)?.disabled) {
+            return;
+        }
+        const newActiveKeys = [...this.activeKeys];
+        const index = newActiveKeys.indexOf(itemId);
+        if (index > -1) {
+            // 收起项
+            newActiveKeys.splice(index, 1);
+        }
+        else {
+            // 展开项
+            if (this.accordion) {
+                // 手风琴模式，先清空所有激活项
+                newActiveKeys.length = 0;
+            }
+            newActiveKeys.push(itemId);
+        }
+        this.activeKeys = newActiveKeys;
+        this.change.emit(newActiveKeys);
+    };
+    isItemActive = (itemId) => {
+        return this.activeKeys.includes(itemId);
+    };
+    render() {
+        return (h(Host, { key: '46d8c8c0f87e4e9db0c4ef960d48c048a8c6b7c8' }, h("div", { key: 'b8f0f0adea687c8c5e165e7ca64df488a02db59e', class: "d-collapse" }, this.parsedItems.map((item) => (h("div", { class: `d-collapse-item ${this.isItemActive(item.id) ? "active" : ""} ${item.disabled ? "disabled" : ""}` }, h("div", { class: "d-collapse-header", onClick: () => this.toggleItem(item.id) }, h("span", { class: "d-collapse-title" }, item.title), h("span", { class: "d-collapse-arrow" }, h("svg", { width: "16", height: "16", viewBox: "0 0 16 16", fill: "currentColor" }, h("path", { d: "M8 11L3 6h10l-5 5z" })))), h("div", { class: "d-collapse-content" }, h("div", { class: "d-collapse-content-inner" }, item.content)))))), h("slot", { key: 'da01366d6be5f7a084860fa30dbc4e513c2adbbf' })));
+    }
+    static get watchers() { return {
+        "items": ["parseProps"],
+        "defaultActiveKeys": ["parseProps"]
+    }; }
+};
+DCollapse.style = dCollapseCss;
+
+const dDividerCss = ":host{display:block;--divider-color:#bbb;--divider-size:1px;--divider-margin:24px 0}:host(.divider){position:relative}:host(.divider-horizontal){display:block;clear:both;width:100%;min-width:100%;height:var(--divider-size);margin:var(--divider-margin)}:host(.divider-vertical){display:inline-block;height:1em;margin:0 8px;vertical-align:middle;width:var(--divider-size)}:host(.divider-horizontal.divider-solid){background-color:var(--divider-color)}:host(.divider-vertical.divider-solid){background-color:var(--divider-color)}:host(.divider-horizontal.divider-highDensityDashed){background-color:transparent;background-image:linear-gradient(\n\t\tto right,\n\t\tvar(--divider-color),\n\t\tvar(--divider-color) 50%,\n\t\ttransparent 50%\n\t);background-size:48px var(--divider-size);background-repeat:repeat-x}:host(.divider-horizontal.divider-lowDensityDashed){background-color:transparent;background-image:linear-gradient(\n\t\tto right,\n\t\tvar(--divider-color) 50%,\n\t\ttransparent 50%\n\t);background-size:16px var(--divider-size);background-repeat:repeat-x}";
+
+const DDivider = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+    }
+    /**
+     * 分割线方向，可选值：horizontal、vertical
+     */
+    direction = "horizontal";
+    /**
+     * 分割线颜色
+     */
+    color = "#bbb";
+    /**
+     * 分割线粗细
+     */
+    size = "1px";
+    /**
+     * 分割线样式，可选值：solid、dashed、dotted
+     */
+    lineType = "solid";
+    /**
+     * 分割线边距
+     */
+    margin = "24px 0";
+    render() {
+        return (h(Host, { key: 'a62e7b6998530a6f48983f1c8348fd0d0e0a986f', style: {
+                "--divider-color": this.color,
+                "--divider-size": this.size,
+                "--divider-margin": this.margin,
+            }, class: {
+                divider: true,
+                [`divider-${this.direction}`]: true,
+                [`divider-${this.lineType}`]: true,
+            } }, h("slot", { key: '7d5ea2245ff5fb3f83b5ad15819dafa7594ba592' })));
+    }
+};
+DDivider.style = dDividerCss;
+
+const dDrawerCss = ":host{position:fixed;left:0;top:0;z-index:8000;width:100vw;height:100vh;display:none;overflow:hidden;transition:all 0.3s}.ivy-mask{position:absolute;left:0;top:0;z-index:-1;width:100%;height:100%;background-color:var(--ivy-mask-color, rgba(55, 55, 55, 0.6))}.ivy-drawer{position:absolute;z-index:1;height:100%;background-color:#ffffff}.ivy-drawer-header{padding:12px 16px;border-bottom:1px solid var(--ivy-border-color, #dcdfe6);display:none}:host([show-header]) .ivy-drawer-header{display:block}.ivy-drawer-body{padding:16px}:host([show]){display:block}:host([show]) .ivy-drawer{animation-delay:0.05s;animation-duration:0.3s;animation-fill-mode:forwards}:host([placement=\"right\"]) .ivy-drawer{right:0;top:0;transform:translate3d(100%, 0, 0)}:host([placement=\"right\"][show]) .ivy-drawer{animation-name:slideInRight}:host([placement=\"left\"]) .ivy-drawer{left:0;top:0;transform:translate3d(-100%, 0, 0)}:host([placement=\"left\"][show]) .ivy-drawer{animation-name:slideInLeft}:host([placement=\"top\"]) .ivy-drawer{left:0;top:0;transform:translate3d(0, -100%, 0)}:host([placement=\"top\"][show]) .ivy-drawer{animation-name:slideInDown}:host([placement=\"bottom\"]) .ivy-drawer{left:0;bottom:0;transform:translate3d(0, 100%, 0)}:host([placement=\"bottom\"][show]) .ivy-drawer{animation-name:slideInUp}@keyframes slideInLeft{from{transform:translate3d(-100%, 0, 0);visibility:visible}to{transform:translate3d(0, 0, 0)}}@keyframes slideInRight{from{transform:translate3d(100%, 0, 0);visibility:visible}to{transform:translate3d(0, 0, 0)}}@keyframes slideInDown{from{transform:translate3d(0, -100%, 0);visibility:visible}to{transform:translate3d(0, 0, 0)}}@keyframes slideInUp{from{transform:translate3d(0, 100%, 0);visibility:visible}to{transform:translate3d(0, 0, 0)}}";
+
+const DDrawer = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.closed = createEvent(this, "closed");
+    }
+    visible = false;
+    width = "36%";
+    showHeader = false;
+    header = "";
+    maskClosable = true;
+    placement = "right";
+    /**监听传入的 placement 是否符合要求*/
+    validateName(val) {
+        const flag = ["left", "right", "top", "bottom"].includes(val);
+        if (!flag) {
+            throw new Error("placement 必须是 left/right/top/bottom 其中之一");
+        }
+    }
+    renderHeader() {
+        if (this.showHeader) {
+            return (h("div", { class: "ivy-drawer-header" }, h("slot", { name: "header" }, this.header)));
+        }
+        else {
+            return null;
+        }
+    }
+    render() {
+        return (h(Host, { key: '53f6a8790c716b46e857185bac5081759c21053b', show: this.visible }, h("div", { key: 'ee18d9d70f463e4681b6bed7e84a55db9f0c8f1b', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: '37e963019c04c1333418685ba0ea41905fb4519d', class: "ivy-drawer", style: {
+                width: ["left", "right"].includes(this.placement)
+                    ? this.width
+                    : "100%",
+                height: ["top", "bottom"].includes(this.placement)
+                    ? this.width
+                    : "100%",
+            } }, this.renderHeader(), h("div", { key: 'e0e3d1f7df86b05f2727fd404aae2d6734744281', class: "ivy-drawer-body" }, h("slot", { key: 'e67387de229fcef90c5074320942e96105056c1f' })))));
+    }
+    closed;
+    closeHandler() {
+        this.closed.emit();
+    }
+    async open() {
+        this.visible = true;
+    }
+    async close() {
+        this.closeHandler();
+        this.visible = false;
+    }
+    maskClose() {
+        if (this.maskClosable) {
+            this.visible = false;
+        }
+    }
+    static get watchers() { return {
+        "placement": ["validateName"]
+    }; }
+};
+DDrawer.style = dDrawerCss;
 
 const dIconCss = "@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}:host{display:inline-flex}svg{transition:transform 0.3s ease;vertical-align:middle}";
 
-const DIcon = /*@__PURE__*/ proxyCustomElement(class DIcon extends H {
-    constructor() {
-        super();
-        this.__registerHost();
-        this.__attachShadow();
+const DIcon = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
         this.iconClick = createEvent(this, "iconClick");
     }
     /**
@@ -364,32 +821,130 @@ const DIcon = /*@__PURE__*/ proxyCustomElement(class DIcon extends H {
             transform: this.rotate ? `rotate(${this.rotate}deg)` : "",
             animation: this.spin ? "spin 2s linear infinite" : "none",
         };
-        return (h(Host, { key: '05162437cc99cf1f4e98021605c814931303e788', onClick: this.handleClick }, h("svg", { key: '79eaee1f3dc377ac5e1ee043222681d4b5128157', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, h("g", { key: '02de353e73fdf84abfe0821fa1202e0ee51fe612', fill: this.color }, this.renderIcon()))));
+        return (h(Host, { key: '9cd3e1b868f1f59a4e18513077b88333ce12e74a', onClick: this.handleClick }, h("svg", { key: 'cfe2469dd8ebdbeed82621275278fae2bee2dd1f', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, h("g", { key: '715092f9f677a4b7680d3cc8607de528285cebab', fill: this.color }, this.renderIcon()))));
     }
-    static get style() { return dIconCss; }
-}, [1, "d-icon", {
-        "name": [1],
-        "size": [1],
-        "color": [1],
-        "rotate": [2],
-        "spin": [4]
-    }]);
-function defineCustomElement() {
-    if (typeof customElements === "undefined") {
-        return;
+};
+DIcon.style = dIconCss;
+
+const dMessageCss = ":host{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999}.d-message-container{display:flex;flex-direction:column;align-items:center;gap:10px}.d-message{padding:10px 20px;border-radius:4px;box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);animation:message-fade-in 0.3s ease-in-out;opacity:1;transform:translateY(0);transition:all 0.3s ease-in-out}.d-message.removing{opacity:0;transform:translateY(-20px)}.d-message__content{font-size:14px;line-height:1.5;display:flex;align-items:center;gap:8px}.d-message__icon{width:16px}.d-message--success{background-color:#f0f9eb;color:#67c23a;border:1px solid #e1f3d8}.d-message--warning{background-color:#fdf6ec;color:#e6a23c;border:1px solid #faecd8}.d-message--error{background-color:#fef0f0;color:#f56c6c;border:1px solid #fde2e2}.d-message--info{background-color:#f4f4f5;color:#909399;border:1px solid #e9e9eb}@keyframes message-fade-in{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}@keyframes message-fade-out{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-20px)}}";
+
+const DMessage = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
     }
-    const components = ["d-icon"];
-    components.forEach(tagName => { switch (tagName) {
-        case "d-icon":
-            if (!customElements.get(tagName)) {
-                customElements.define(tagName, DIcon);
+    messages = [];
+    getIconColor(type) {
+        switch (type) {
+            case "success":
+                return "#67C23A";
+            case "warning":
+                return "#E6A23C";
+            case "error":
+                return "#F56C6C";
+            case "info":
+                return "#909399";
+            default:
+                return "#909399";
+        }
+    }
+    handleMessage(ev) {
+        const message = ev.detail;
+        this.messages = [...this.messages, message];
+        // 使用自定义显示时间或默认3秒
+        const duration = message.duration || 3000;
+        setTimeout(() => {
+            const messageElement = this.el.shadowRoot?.querySelector(`[data-message-id="${message.id}"]`);
+            if (messageElement) {
+                messageElement.classList.add("removing");
+                // 等待动画结束后移除消息
+                setTimeout(() => {
+                    this.messages = this.messages.filter((m) => m.id !== message.id);
+                }, 300);
             }
-            break;
-    } });
-}
-defineCustomElement();
+        }, duration);
+    }
+    el;
+    componentDidLoad() {
+        this.el = document.querySelector("d-message");
+    }
+    render() {
+        return (h(Host, { key: '388a48ace587237ac440d8204f76ad3c4cd759e5' }, h("div", { key: '22c9b1aff03f9e95ae18536fbb6ca4c9c76fc579', class: "d-message-container" }, this.messages.map((message) => (h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, h("div", { class: "d-message__content" }, message.icon && (h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), h("span", null, message.text))))))));
+    }
+};
+DMessage.style = dMessageCss;
 
-export { DIcon as D, defineCustomElement as d };
-//# sourceMappingURL=p-mWWh2AIB.js.map
+const dModalCss = ":host{position:fixed;left:0;top:0;z-index:8000;width:100vw;height:100vh;display:none;overflow:hidden;transition:all 0.3s}.ivy-mask{position:absolute;left:0;top:0;z-index:-1;width:100%;height:100%;background-color:var(--ivy-mask-color, rgba(55, 55, 55, 0.6))}.ivy-modal{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%) scale(0.5);z-index:1;background-color:#ffffff;border-radius:4px;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15);opacity:0;transition:all 0.3s ease-in-out}:host([show]){display:block}:host([show]) .ivy-modal{transform:translate(-50%, -50%) scale(1);opacity:1}.ivy-modal-header{padding:16px 24px;border-bottom:1px solid var(--ivy-border-color, #dcdfe6);display:none}:host([show-header]) .ivy-modal-header{display:flex;justify-content:space-between;align-items:center}.ivy-modal-title{font-size:16px;font-weight:500;color:rgba(0, 0, 0, 0.85)}.ivy-modal-close{font-size:20px;color:rgba(0, 0, 0, 0.45);cursor:pointer;transition:color 0.3s}.ivy-modal-close:hover{color:rgba(0, 0, 0, 0.85)}.ivy-modal-body{padding:24px;max-height:calc(100vh - 200px);overflow-y:auto}.ivy-modal-footer{padding:10px 24px;border-top:1px solid var(--ivy-border-color, #dcdfe6);text-align:right;display:none}:host([show-footer]) .ivy-modal-footer{display:block}.ivy-modal-btn{padding:4px 15px;font-size:14px;border-radius:2px;cursor:pointer;transition:all 0.3s;margin-left:8px;border:1px solid transparent}.ivy-modal-btn-cancel{background:#fff;border-color:#d9d9d9;color:rgba(0, 0, 0, 0.65)}.ivy-modal-btn-cancel:hover{color:#40a9ff;border-color:#40a9ff}.ivy-modal-btn-confirm{background:#1890ff;border-color:#1890ff;color:#fff}.ivy-modal-btn-confirm:hover{background:#40a9ff;border-color:#40a9ff}";
 
-//# sourceMappingURL=p-mWWh2AIB.js.map
+const DModal = class {
+    constructor(hostRef) {
+        registerInstance(this, hostRef);
+        this.onClose = createEvent(this, "onClose");
+        this.onConfirm = createEvent(this, "onConfirm");
+        this.onCancel = createEvent(this, "onCancel");
+    }
+    show = false;
+    width = "520px";
+    showHeader = true;
+    header = "";
+    maskClosable = true;
+    showFooter = true;
+    confirmText = "确定";
+    cancelText = "取消";
+    renderHeader() {
+        if (this.showHeader) {
+            return (h("div", { class: "ivy-modal-header" }, h("div", { class: "ivy-modal-title" }, h("slot", { name: "header" }, this.header)), h("div", { class: "ivy-modal-close", onClick: this.close.bind(this) }, "\u00D7")));
+        }
+        else {
+            return null;
+        }
+    }
+    renderFooter() {
+        if (this.showFooter) {
+            return (h("div", { class: "ivy-modal-footer" }, h("button", { class: "ivy-modal-btn ivy-modal-btn-cancel", onClick: this.cancel.bind(this) }, this.cancelText), h("button", { class: "ivy-modal-btn ivy-modal-btn-confirm", onClick: this.confirm.bind(this) }, this.confirmText)));
+        }
+        else {
+            return null;
+        }
+    }
+    render() {
+        return (h(Host, { key: '3b568c47e4b3588c80dcb8db7e2c43893ece69a8', show: this.show }, h("div", { key: '6343bb95f99c228722c127f3942dcea190fa3768', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: 'a8ed436b3475c72a94a1d87f492c5412d7018d4e', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), h("div", { key: '101e0eec56d7fc9142c4e1708161a84d281173cd', class: "ivy-modal-body" }, h("slot", { key: '71693907da2ec64814dede8bd33b6fe1a170631f' })), this.renderFooter())));
+    }
+    onClose;
+    onConfirm;
+    onCancel;
+    closeHandler() {
+        this.onClose.emit();
+    }
+    confirmHandler() {
+        this.onConfirm.emit();
+    }
+    cancelHandler() {
+        this.onCancel.emit();
+    }
+    async open() {
+        this.show = true;
+    }
+    async close() {
+        this.closeHandler();
+        this.show = false;
+    }
+    async confirm() {
+        this.confirmHandler();
+        this.show = false;
+    }
+    async cancel() {
+        this.cancelHandler();
+        this.show = false;
+    }
+    maskClose() {
+        if (this.maskClosable) {
+            this.show = false;
+        }
+    }
+};
+DModal.style = dModalCss;
+
+export { DBacktop as d_backtop, DBreadcrumb as d_breadcrumb, DBreadcrumbItem as d_breadcrumb_item, DButton as d_button, DCarousel as d_carousel, DCollapse as d_collapse, DDivider as d_divider, DDrawer as d_drawer, DIcon as d_icon, DMessage as d_message, DModal as d_modal };
+//# sourceMappingURL=d-backtop.d-breadcrumb.d-breadcrumb-item.d-button.d-carousel.d-collapse.d-divider.d-drawer.d-icon.d-message.d-modal.entry.js.map
+
+//# sourceMappingURL=d-backtop_11.entry.js.map

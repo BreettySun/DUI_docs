@@ -43,10 +43,10 @@ const DBacktop = class {
         }
     };
     render() {
-        return (index.h(index.Host, { key: 'f402920450b443defe942fd2a49ae114466b5a51' }, index.h("div", { key: '3765f13d4217cc9a55e269fd535485de82e4deed', class: `d-backtop ${this.visible ? "d-backtop--visible" : ""}`, style: {
+        return (index.h(index.Host, { key: '105684e4bf7d4b730967ac0c5da07d6b027d4a2f' }, index.h("div", { key: '1755f039f7c35192d91ce6745ddcee58cabd50a8', class: `d-backtop ${this.visible ? "d-backtop--visible" : ""}`, style: {
                 right: this.right,
                 bottom: this.bottom,
-            }, onClick: this.handleClick }, index.h("slot", { key: '4a509878e50f332fde7d51ab3f2e4a4f8431abbf' }))));
+            }, onClick: this.handleClick }, index.h("slot", { key: '1a21d042cc3d7baab1fe253a6a022ba979b1b56b' }))));
     }
 };
 DBacktop.style = dBacktopCss;
@@ -60,7 +60,7 @@ const DBreadcrumb = class {
     get el() { return index.getElement(this); }
     separator = "/";
     render() {
-        return (index.h(index.Host, { key: '0605b766de7e95e92d74038ebd57a617e8c743e3' }, index.h("nav", { key: '5ad4c80b27f81beacbf5e197c9c1dd51058897e3', "aria-label": "breadcrumb" }, index.h("ul", { key: 'c98a38cb9e2a7c5006ee8acf4bbb90253c5a6218', class: "breadcrumb", itemscope: true, itemtype: "https://schema.org/BreadcrumbList" }, index.h("slot", { key: 'e1f33cd3b1681c5eed26790d56c08aee1c583acc' })))));
+        return (index.h(index.Host, { key: '8468b940e400b17a0beb1f92fd47f17c692bde58' }, index.h("nav", { key: '434f8ac7c78f53ba189401a5f7fc077e5476b076', "aria-label": "breadcrumb" }, index.h("ul", { key: '861f7499165e68feb631205a6475aa9e5246f033', class: "breadcrumb", itemscope: true, itemtype: "https://schema.org/BreadcrumbList" }, index.h("slot", { key: 'a266463f32e11c1a7388f5209f157816975eeb8c' })))));
     }
 };
 DBreadcrumb.style = dBreadcrumbCss$1;
@@ -81,7 +81,7 @@ const DBreadcrumbItem = class {
     render() {
         const isFirst = !this.el.previousElementSibling;
         const content = this.el.innerHTML;
-        return (index.h(index.Host, { key: 'a3d35fb94fe7eade82ab49d09bb54e18576f94c0' }, index.h("li", { key: '4526f1e828b1daa26612a2121a25ac5995f16330', class: "breadcrumb-item", itemprop: "itemListElement", itemscope: true, itemtype: "https://schema.org/ListItem" }, !isFirst && index.h("span", { key: '7a52d9aa5ceab0ca751da88e071a825ff748b0a9', class: "breadcrumb-slash" }, this.separator), this.href ? (index.h("a", { itemprop: "item", href: this.href }, index.h("span", { itemprop: "name", innerHTML: content }))) : (index.h("span", { itemprop: "name", innerHTML: content })), index.h("meta", { key: '9613916fec6b121c5eb433f36adb9eb177b64c31', itemprop: "position", content: String(this.position) }))));
+        return (index.h(index.Host, { key: '17cbb5f64eb50d969b68902275c400b99d5f3bfa' }, index.h("li", { key: 'ba4c934a11cec2ede26d056c2cbd672c421c401b', class: "breadcrumb-item", itemprop: "itemListElement", itemscope: true, itemtype: "https://schema.org/ListItem" }, !isFirst && index.h("span", { key: '52833260b8da2667113be5953b803de1504ea31a', class: "breadcrumb-slash" }, this.separator), this.href ? (index.h("a", { itemprop: "item", href: this.href }, index.h("span", { itemprop: "name", innerHTML: content }))) : (index.h("span", { itemprop: "name", innerHTML: content })), index.h("meta", { key: 'f909244b6afac07dc553372f980486d887d34f6f', itemprop: "position", content: String(this.position) }))));
     }
 };
 DBreadcrumbItem.style = dBreadcrumbCss;
@@ -126,7 +126,7 @@ const DButton = class {
             [this.customClass]: !!this.customClass,
         };
         // 允许外部传递style和class
-        return (index.h(index.Host, { key: '39a3b3d6d31a5b60af8fb034884ba226c9348061' }, index.h("button", { key: '21111d3695237b131eaf638b20fcc9a25f019ccf', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, index.h("slot", { key: 'a448b94dc171b3c51a55e3581c2950f680cde1d5' }))));
+        return (index.h(index.Host, { key: 'f7ae88d94851b74c66a773edcd23642e7c62844d' }, index.h("button", { key: '36ff3beef7d6dd4b0586da6807afb722ebe4d78a', class: classes, disabled: this.disabled, style: this.customStyle, part: "button" }, index.h("slot", { key: '133cbf779159b897e5159ed65f8d89c90997eeec' }))));
     }
 };
 DButton.style = dButtonCss;
@@ -262,7 +262,7 @@ const DCarousel = class {
                 height: "100%",
             });
         }
-        return (index.h(index.Host, { key: '6eb66c0da52b3d0f0608dcb0b32961b9e3de8664' }, index.h("div", { key: '15589adeca999f3ba44d18c0122d2b888d2830e0', class: "carousel-container", part: "carousel" }, index.h("slot", { key: '3a8536dbd0e5ead24ac587eec98cd85d415423cd' })), this.itemsCount > 0 && (index.h("div", { key: '579eb73ccdc1a7b625aef383526e58ecd9d8ba8a', class: "carousel-indicators", part: "indicators", style: {
+        return (index.h(index.Host, { key: '77df2fab69d4e6c0e6c2b52482b21256c9357385' }, index.h("div", { key: '88a6027fec31a372c8d9c08f93bdeb931bb7a8c2', class: "carousel-container", part: "carousel" }, index.h("slot", { key: '4468b06e97d7658cd0b768c94df3110b7da241f0' })), this.itemsCount > 0 && (index.h("div", { key: '4e7d57957e57f0ad1937e9878aeac0384f6d6acc', class: "carousel-indicators", part: "indicators", style: {
                 display: "flex",
                 position: "absolute",
                 zIndex: "10",
@@ -282,6 +282,84 @@ const DCarousel = class {
     }; }
 };
 DCarousel.style = dCarouselCss;
+
+const dCollapseCss = ":host{display:block;font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n\t\t\"Helvetica Neue\", Arial, sans-serif}.d-collapse{border:1px solid #e4e7ed;border-radius:4px;background-color:#fff}.d-collapse-item{border-bottom:1px solid #e4e7ed;transition:all 0.3s ease;animation:fadeIn 0.3s ease}.d-collapse-item:last-child{border-bottom:none}.d-collapse-item.disabled{opacity:0.6;cursor:not-allowed}.d-collapse-item.disabled .d-collapse-header{cursor:not-allowed}.d-collapse-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background-color:#fafafa;cursor:pointer;transition:background-color 0.3s ease;user-select:none}.d-collapse-header:hover{background-color:#f5f5f5}.d-collapse-title{font-size:14px;font-weight:500;color:#303133;flex:1}.d-collapse-arrow{display:flex;align-items:center;justify-content:center;width:16px;height:16px;color:#909399;transition:transform 0.3s ease}.d-collapse-item.active .d-collapse-arrow{transform:rotate(180deg);color:#1890ff}.d-collapse-content{max-height:0;overflow:hidden;transition:max-height 0.3s ease;background-color:#fff}.d-collapse-item.active .d-collapse-content{max-height:500px}.d-collapse-content-inner{padding:16px;color:#606266;font-size:14px;line-height:1.6}@keyframes fadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}@media (max-width: 768px){.d-collapse-header{padding:10px 12px}.d-collapse-content-inner{padding:12px}.d-collapse-title{font-size:13px}}";
+
+const DCollapse = class {
+    constructor(hostRef) {
+        index.registerInstance(this, hostRef);
+        this.change = index.createEvent(this, "change");
+    }
+    items = [];
+    accordion = false; // 手风琴模式，同时只能展开一个
+    defaultActiveKeys = []; // 默认展开的项
+    activeKeys = [];
+    parsedItems = [];
+    change;
+    componentWillLoad() {
+        this.parseProps();
+    }
+    parseProps() {
+        // 解析items属性
+        if (typeof this.items === "string") {
+            try {
+                this.parsedItems = JSON.parse(this.items);
+            }
+            catch (e) {
+                console.error("Failed to parse items:", e);
+                this.parsedItems = [];
+            }
+        }
+        else {
+            this.parsedItems = this.items || [];
+        }
+        // 解析defaultActiveKeys属性
+        if (typeof this.defaultActiveKeys === "string") {
+            try {
+                this.activeKeys = JSON.parse(this.defaultActiveKeys);
+            }
+            catch (e) {
+                console.error("Failed to parse defaultActiveKeys:", e);
+                this.activeKeys = [];
+            }
+        }
+        else {
+            this.activeKeys = [...(this.defaultActiveKeys || [])];
+        }
+    }
+    toggleItem = (itemId) => {
+        if (this.parsedItems.find((item) => item.id === itemId)?.disabled) {
+            return;
+        }
+        const newActiveKeys = [...this.activeKeys];
+        const index = newActiveKeys.indexOf(itemId);
+        if (index > -1) {
+            // 收起项
+            newActiveKeys.splice(index, 1);
+        }
+        else {
+            // 展开项
+            if (this.accordion) {
+                // 手风琴模式，先清空所有激活项
+                newActiveKeys.length = 0;
+            }
+            newActiveKeys.push(itemId);
+        }
+        this.activeKeys = newActiveKeys;
+        this.change.emit(newActiveKeys);
+    };
+    isItemActive = (itemId) => {
+        return this.activeKeys.includes(itemId);
+    };
+    render() {
+        return (index.h(index.Host, { key: '46d8c8c0f87e4e9db0c4ef960d48c048a8c6b7c8' }, index.h("div", { key: 'b8f0f0adea687c8c5e165e7ca64df488a02db59e', class: "d-collapse" }, this.parsedItems.map((item) => (index.h("div", { class: `d-collapse-item ${this.isItemActive(item.id) ? "active" : ""} ${item.disabled ? "disabled" : ""}` }, index.h("div", { class: "d-collapse-header", onClick: () => this.toggleItem(item.id) }, index.h("span", { class: "d-collapse-title" }, item.title), index.h("span", { class: "d-collapse-arrow" }, index.h("svg", { width: "16", height: "16", viewBox: "0 0 16 16", fill: "currentColor" }, index.h("path", { d: "M8 11L3 6h10l-5 5z" })))), index.h("div", { class: "d-collapse-content" }, index.h("div", { class: "d-collapse-content-inner" }, item.content)))))), index.h("slot", { key: 'da01366d6be5f7a084860fa30dbc4e513c2adbbf' })));
+    }
+    static get watchers() { return {
+        "items": ["parseProps"],
+        "defaultActiveKeys": ["parseProps"]
+    }; }
+};
+DCollapse.style = dCollapseCss;
 
 const dDividerCss = ":host{display:block;--divider-color:#bbb;--divider-size:1px;--divider-margin:24px 0}:host(.divider){position:relative}:host(.divider-horizontal){display:block;clear:both;width:100%;min-width:100%;height:var(--divider-size);margin:var(--divider-margin)}:host(.divider-vertical){display:inline-block;height:1em;margin:0 8px;vertical-align:middle;width:var(--divider-size)}:host(.divider-horizontal.divider-solid){background-color:var(--divider-color)}:host(.divider-vertical.divider-solid){background-color:var(--divider-color)}:host(.divider-horizontal.divider-highDensityDashed){background-color:transparent;background-image:linear-gradient(\n\t\tto right,\n\t\tvar(--divider-color),\n\t\tvar(--divider-color) 50%,\n\t\ttransparent 50%\n\t);background-size:48px var(--divider-size);background-repeat:repeat-x}:host(.divider-horizontal.divider-lowDensityDashed){background-color:transparent;background-image:linear-gradient(\n\t\tto right,\n\t\tvar(--divider-color) 50%,\n\t\ttransparent 50%\n\t);background-size:16px var(--divider-size);background-repeat:repeat-x}";
 
@@ -310,7 +388,7 @@ const DDivider = class {
      */
     margin = "24px 0";
     render() {
-        return (index.h(index.Host, { key: '9e0562ecab182dac555f1b9e1bddb001639a7d16', style: {
+        return (index.h(index.Host, { key: 'a62e7b6998530a6f48983f1c8348fd0d0e0a986f', style: {
                 "--divider-color": this.color,
                 "--divider-size": this.size,
                 "--divider-margin": this.margin,
@@ -318,7 +396,7 @@ const DDivider = class {
                 divider: true,
                 [`divider-${this.direction}`]: true,
                 [`divider-${this.lineType}`]: true,
-            } }, index.h("slot", { key: '8f45d0839b6bde50a9603b5ac32ca7295e0bcd2d' })));
+            } }, index.h("slot", { key: '7d5ea2245ff5fb3f83b5ad15819dafa7594ba592' })));
     }
 };
 DDivider.style = dDividerCss;
@@ -352,14 +430,14 @@ const DDrawer = class {
         }
     }
     render() {
-        return (index.h(index.Host, { key: '47a9c08a5b926555e214751aa6fb9bb859f82993', show: this.visible }, index.h("div", { key: 'c7e331eb4ef9881031b5789e5f4f9fdd618c2bb4', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: 'b49c7c9d5731178b504d8aa3ce1dc304f42e4d6e', class: "ivy-drawer", style: {
+        return (index.h(index.Host, { key: '53f6a8790c716b46e857185bac5081759c21053b', show: this.visible }, index.h("div", { key: 'ee18d9d70f463e4681b6bed7e84a55db9f0c8f1b', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: '37e963019c04c1333418685ba0ea41905fb4519d', class: "ivy-drawer", style: {
                 width: ["left", "right"].includes(this.placement)
                     ? this.width
                     : "100%",
                 height: ["top", "bottom"].includes(this.placement)
                     ? this.width
                     : "100%",
-            } }, this.renderHeader(), index.h("div", { key: '2b5e2e1ca1623ca63c794e11fa0f35f16cfae56c', class: "ivy-drawer-body" }, index.h("slot", { key: '10cdf2e12f077a820c95598f663ee23da6ae06fa' })))));
+            } }, this.renderHeader(), index.h("div", { key: 'e0e3d1f7df86b05f2727fd404aae2d6734744281', class: "ivy-drawer-body" }, index.h("slot", { key: 'e67387de229fcef90c5074320942e96105056c1f' })))));
     }
     closed;
     closeHandler() {
@@ -745,7 +823,7 @@ const DIcon = class {
             transform: this.rotate ? `rotate(${this.rotate}deg)` : "",
             animation: this.spin ? "spin 2s linear infinite" : "none",
         };
-        return (index.h(index.Host, { key: '05162437cc99cf1f4e98021605c814931303e788', onClick: this.handleClick }, index.h("svg", { key: '79eaee1f3dc377ac5e1ee043222681d4b5128157', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, index.h("g", { key: '02de353e73fdf84abfe0821fa1202e0ee51fe612', fill: this.color }, this.renderIcon()))));
+        return (index.h(index.Host, { key: '9cd3e1b868f1f59a4e18513077b88333ce12e74a', onClick: this.handleClick }, index.h("svg", { key: 'cfe2469dd8ebdbeed82621275278fae2bee2dd1f', xmlns: "http://www.w3.org/2000/svg", width: this.size, height: this.size, viewBox: "0 0 24 24", fill: "none", style: svgStyle, part: "icon" }, index.h("g", { key: '715092f9f677a4b7680d3cc8607de528285cebab', fill: this.color }, this.renderIcon()))));
     }
 };
 DIcon.style = dIconCss;
@@ -792,7 +870,7 @@ const DMessage = class {
         this.el = document.querySelector("d-message");
     }
     render() {
-        return (index.h(index.Host, { key: 'c3758b2674bd84c4fd484158caf11b15af52c488' }, index.h("div", { key: 'cfc11f52e414090a6ec23c006203bbd1849e28bc', class: "d-message-container" }, this.messages.map((message) => (index.h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, index.h("div", { class: "d-message__content" }, message.icon && (index.h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), index.h("span", null, message.text))))))));
+        return (index.h(index.Host, { key: '388a48ace587237ac440d8204f76ad3c4cd759e5' }, index.h("div", { key: '22c9b1aff03f9e95ae18536fbb6ca4c9c76fc579', class: "d-message-container" }, this.messages.map((message) => (index.h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, index.h("div", { class: "d-message__content" }, message.icon && (index.h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), index.h("span", null, message.text))))))));
     }
 };
 DMessage.style = dMessageCss;
@@ -831,7 +909,7 @@ const DModal = class {
         }
     }
     render() {
-        return (index.h(index.Host, { key: '8f5f2997ab138f6bf65b77da94a2c853a04fb25d', show: this.show }, index.h("div", { key: 'c8f000be9cad3dcb54354cc3ca1638946a242052', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: 'ee0ec14afcc65410c56ae0f285f1ac6e8b94fbe0', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), index.h("div", { key: '663ce79bda1c1be3d1f15d00ff150500f501d888', class: "ivy-modal-body" }, index.h("slot", { key: '82585d9c2fe4545c53db69f64816c1f8494cde96' })), this.renderFooter())));
+        return (index.h(index.Host, { key: '3b568c47e4b3588c80dcb8db7e2c43893ece69a8', show: this.show }, index.h("div", { key: '6343bb95f99c228722c127f3942dcea190fa3768', class: "ivy-mask", onClick: this.maskClose.bind(this) }), index.h("div", { key: 'a8ed436b3475c72a94a1d87f492c5412d7018d4e', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), index.h("div", { key: '101e0eec56d7fc9142c4e1708161a84d281173cd', class: "ivy-modal-body" }, index.h("slot", { key: '71693907da2ec64814dede8bd33b6fe1a170631f' })), this.renderFooter())));
     }
     onClose;
     onConfirm;
@@ -873,11 +951,12 @@ exports.d_breadcrumb = DBreadcrumb;
 exports.d_breadcrumb_item = DBreadcrumbItem;
 exports.d_button = DButton;
 exports.d_carousel = DCarousel;
+exports.d_collapse = DCollapse;
 exports.d_divider = DDivider;
 exports.d_drawer = DDrawer;
 exports.d_icon = DIcon;
 exports.d_message = DMessage;
 exports.d_modal = DModal;
-//# sourceMappingURL=d-backtop.d-breadcrumb.d-breadcrumb-item.d-button.d-carousel.d-divider.d-drawer.d-icon.d-message.d-modal.entry.cjs.js.map
+//# sourceMappingURL=d-backtop.d-breadcrumb.d-breadcrumb-item.d-button.d-carousel.d-collapse.d-divider.d-drawer.d-icon.d-message.d-modal.entry.cjs.js.map
 
-//# sourceMappingURL=d-backtop_10.cjs.entry.js.map
+//# sourceMappingURL=d-backtop_11.cjs.entry.js.map

@@ -50,6 +50,10 @@ export default defineConfig({
 								text: "Carousel 走马灯",
 								link: "/components/data-display/carousel",
 							},
+							{
+								text: "Collapse 折叠面板",
+								link: "/components/data-display/collapse",
+							},
 						],
 					},
 					{

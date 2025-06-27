@@ -36,7 +36,7 @@ const DModal$1 = /*@__PURE__*/ proxyCustomElement(class DModal extends H {
         }
     }
     render() {
-        return (h(Host, { key: '8f5f2997ab138f6bf65b77da94a2c853a04fb25d', show: this.show }, h("div", { key: 'c8f000be9cad3dcb54354cc3ca1638946a242052', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: 'ee0ec14afcc65410c56ae0f285f1ac6e8b94fbe0', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), h("div", { key: '663ce79bda1c1be3d1f15d00ff150500f501d888', class: "ivy-modal-body" }, h("slot", { key: '82585d9c2fe4545c53db69f64816c1f8494cde96' })), this.renderFooter())));
+        return (h(Host, { key: '3b568c47e4b3588c80dcb8db7e2c43893ece69a8', show: this.show }, h("div", { key: '6343bb95f99c228722c127f3942dcea190fa3768', class: "ivy-mask", onClick: this.maskClose.bind(this) }), h("div", { key: 'a8ed436b3475c72a94a1d87f492c5412d7018d4e', class: "ivy-modal", style: { width: this.width } }, this.renderHeader(), h("div", { key: '101e0eec56d7fc9142c4e1708161a84d281173cd', class: "ivy-modal-body" }, h("slot", { key: '71693907da2ec64814dede8bd33b6fe1a170631f' })), this.renderFooter())));
     }
     onClose;
     onConfirm;

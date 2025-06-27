@@ -1,5 +1,5 @@
 import { p as proxyCustomElement, H, h, c as Host } from './p-CKuW6hQ4.js';
-import { d as defineCustomElement$2 } from './p-mWWh2AIB.js';
+import { d as defineCustomElement$2 } from './p-Csi4oSZD.js';
 
 const dMessageCss = ":host{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999}.d-message-container{display:flex;flex-direction:column;align-items:center;gap:10px}.d-message{padding:10px 20px;border-radius:4px;box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);animation:message-fade-in 0.3s ease-in-out;opacity:1;transform:translateY(0);transition:all 0.3s ease-in-out}.d-message.removing{opacity:0;transform:translateY(-20px)}.d-message__content{font-size:14px;line-height:1.5;display:flex;align-items:center;gap:8px}.d-message__icon{width:16px}.d-message--success{background-color:#f0f9eb;color:#67c23a;border:1px solid #e1f3d8}.d-message--warning{background-color:#fdf6ec;color:#e6a23c;border:1px solid #faecd8}.d-message--error{background-color:#fef0f0;color:#f56c6c;border:1px solid #fde2e2}.d-message--info{background-color:#f4f4f5;color:#909399;border:1px solid #e9e9eb}@keyframes message-fade-in{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}@keyframes message-fade-out{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-20px)}}";
 
@@ -45,7 +45,7 @@ const DMessage$1 = /*@__PURE__*/ proxyCustomElement(class DMessage extends H {
         this.el = document.querySelector("d-message");
     }
     render() {
-        return (h(Host, { key: 'c3758b2674bd84c4fd484158caf11b15af52c488' }, h("div", { key: 'cfc11f52e414090a6ec23c006203bbd1849e28bc', class: "d-message-container" }, this.messages.map((message) => (h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, h("div", { class: "d-message__content" }, message.icon && (h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), h("span", null, message.text))))))));
+        return (h(Host, { key: '388a48ace587237ac440d8204f76ad3c4cd759e5' }, h("div", { key: '22c9b1aff03f9e95ae18536fbb6ca4c9c76fc579', class: "d-message-container" }, this.messages.map((message) => (h("div", { class: `d-message d-message--${message.type}`, "data-message-id": message.id, key: message.id }, h("div", { class: "d-message__content" }, message.icon && (h("d-icon", { name: message.icon, color: this.getIconColor(message.type), class: "d-message__icon" })), h("span", null, message.text))))))));
     }
     static get style() { return dMessageCss; }
 }, [1, "d-message", {

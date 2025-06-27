@@ -43,10 +43,10 @@ const DBacktop$1 = /*@__PURE__*/ proxyCustomElement(class DBacktop extends H {
         }
     };
     render() {
-        return (h(Host, { key: 'f402920450b443defe942fd2a49ae114466b5a51' }, h("div", { key: '3765f13d4217cc9a55e269fd535485de82e4deed', class: `d-backtop ${this.visible ? "d-backtop--visible" : ""}`, style: {
+        return (h(Host, { key: '105684e4bf7d4b730967ac0c5da07d6b027d4a2f' }, h("div", { key: '1755f039f7c35192d91ce6745ddcee58cabd50a8', class: `d-backtop ${this.visible ? "d-backtop--visible" : ""}`, style: {
                 right: this.right,
                 bottom: this.bottom,
-            }, onClick: this.handleClick }, h("slot", { key: '4a509878e50f332fde7d51ab3f2e4a4f8431abbf' }))));
+            }, onClick: this.handleClick }, h("slot", { key: '1a21d042cc3d7baab1fe253a6a022ba979b1b56b' }))));
     }
     static get style() { return dBacktopCss; }
 }, [1, "d-backtop", {
